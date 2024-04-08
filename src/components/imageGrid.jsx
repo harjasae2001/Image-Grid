@@ -1,5 +1,5 @@
 // Step 4: Create a new file for the ImageGrid component (src/components/ImageGrid.js)
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { fetchImages } from "../services/unsplash";
 import { Grid, ImageListItem } from "@mui/material";
 // import { makeStyles } from "@mui/styles";
@@ -20,7 +20,7 @@ const imageGrid = () => {
   const { data: images, isLoading } = useQuery('images', fetchImages);
 
   if (isLoading) return <div>Loading...</div>;
-
+  console.log(images)
   return (
     <Grid container spacing={1}>
       {images.map((image) => (
