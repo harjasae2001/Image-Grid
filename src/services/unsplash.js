@@ -10,5 +10,6 @@ const unsplash = axios.create({
 
 export const fetchImages = async () => {
   const response = await unsplash.get('/photos/random?count=30');
+  console.log(response.data)
   return response.data;
 };
