@@ -15,7 +15,7 @@ import { Grid, ImageListItem } from "@mui/material";
 //     objectFit: "cover",
 //   },
 // }));
-const imageGrid = () => {
+const ImageGrid = () => {
 //   const classes = useStyles();
   const { data: images, isLoading } = useQuery('images', fetchImages);
 
@@ -38,4 +38,4 @@ const imageGrid = () => {
   );
 };
 
-export default imageGrid;
+export default ImageGrid;
